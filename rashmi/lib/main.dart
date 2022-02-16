@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Setpropic.dart';
+import 'class.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Edu-Master',
       theme: ThemeData(primarySwatch: Colors.purple),
-      home: const Setpropic(),
+      home: const Classes(),
     );
   }
 }
