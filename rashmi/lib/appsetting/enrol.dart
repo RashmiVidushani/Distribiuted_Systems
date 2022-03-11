@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rashmi/appsetting/otpcheck.dart';
 import '/widgets/color.dart';
-import 'package:get/get.dart';
 
 class Enrol extends StatefulWidget {
   const Enrol({Key? key}) : super(key: key);
