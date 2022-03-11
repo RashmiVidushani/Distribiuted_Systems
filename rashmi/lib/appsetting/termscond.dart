@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rashmi/enrol.dart';
 import 'package:rashmi/splashscreen.dart';
-import 'color.dart';
+import '../Enrol.dart';
+import '/widgets/color.dart';
 import 'package:get/get.dart';
 
 class Termscond extends StatefulWidget {

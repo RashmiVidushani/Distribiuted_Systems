@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rashmi/mainui.dart';
-import 'color.dart';
+import '/widgets/color.dart';
 
 class Propic extends StatefulWidget {
   const Propic({Key? key}) : super(key: key);

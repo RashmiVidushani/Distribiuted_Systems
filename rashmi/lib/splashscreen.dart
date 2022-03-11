@@ -1,8 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:rashmi/enrol.dart';
-import 'package:rashmi/termscond.dart';
+import 'appsetting/termscond.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

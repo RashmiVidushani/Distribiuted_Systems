@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rashmi/Setpropic.dart';
-import 'color.dart';
+import '/widgets/color.dart';
 
 class Name extends StatefulWidget {
   const Name({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rashmi/Otpcheck.dart';
-import 'color.dart';
+import '/widgets/color.dart';
 import 'package:get/get.dart';
 
 class Enrol extends StatefulWidget {

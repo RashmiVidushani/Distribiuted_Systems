@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'color.dart';
+import 'widgets/color.dart';
 
 class Classes extends StatefulWidget {
   const Classes({Key? key}) : super(key: key);
