@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rashmi/splashscreen.dart';
-import '../Enrol.dart';
+import 'package:rashmi/appsetting/enrol.dart';
 import '/widgets/color.dart';
 import 'package:get/get.dart';
 

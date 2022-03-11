@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rashmi/Setname.dart';
+import 'package:rashmi/appsetting/setname.dart';
 import '/widgets/color.dart';
 import 'package:get/get.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rashmi/Setpropic.dart';
+import '/appsetting/Setpropic.dart';
 import '/widgets/color.dart';
 
 class Name extends StatefulWidget {
