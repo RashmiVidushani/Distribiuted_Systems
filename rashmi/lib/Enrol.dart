@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rashmi/Otpcheck.dart';
 import 'color.dart';
 import 'package:get/get.dart';
 
@@ -88,26 +89,27 @@ class _EnrolState extends State<Enrol> {
                           ),
                         ),
                         const SizedBox(
-                          height: 40,
+                          height: 20,
                         ),
-                        Expanded(
-                            child: InkWell(
-                                onTap: () {
-                                  Get.to(const Enrol());
-                                },
-                                child: Container(
-                                  height: 1,
-                                  width: 300,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: Appcolor.hometabs,
-                                  ),
-                                  child: const Center(
-                                      child: Text(
-                                    "Send Code",
-                                    style: TextStyle(fontSize: 20),
-                                  )),
-                                ))),
+                        Row(children: [
+                          Expanded(
+                              child: ButtonTheme(
+                            minWidth: 300,
+                            height: 70,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const Otpcheck()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                  textStyle: const TextStyle(fontSize: 15)),
+                              child: const Text('Send code'),
+                            ),
+                          ))
+                        ]),
                         const SizedBox(
                           height: 10,
                         ),

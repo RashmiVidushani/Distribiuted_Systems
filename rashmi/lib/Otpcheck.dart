@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rashmi/Setname.dart';
 import 'color.dart';
 import 'package:get/get.dart';
 
@@ -36,7 +37,7 @@ class _OtpcheckState extends State<Otpcheck> {
               const Padding(padding: EdgeInsets.only(top: 20)),
               Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 275,
+                  height: 300,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                           colors: [
@@ -92,42 +93,53 @@ class _OtpcheckState extends State<Otpcheck> {
                         ),
                         Row(
                           children: [
-                            Text(
-                              "Didn't recieve?:",
-                              style: TextStyle(
-                                  fontSize: 18, color: Appcolor.white),
+                            Expanded(
+                              child: Text(
+                                "Didn't recieve?:",
+                                style: TextStyle(
+                                    fontSize: 18, color: Appcolor.white),
+                              ),
                             ),
                             const SizedBox(
                               width: 50,
                             ),
-                            Text(
-                              "Resend OTP:",
-                              style: TextStyle(
-                                  fontSize: 18, color: Appcolor.white),
-                            ),
+                            Expanded(
+                                child: ButtonTheme(
+                              minWidth: 300,
+                              height: 70,
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => const Name()));
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    textStyle: const TextStyle(fontSize: 15)),
+                                child: const Text('Resend OTP'),
+                              ),
+                            ))
                           ],
                         ),
                         const SizedBox(
                           height: 20,
                         ),
-                        Expanded(
-                            child: InkWell(
-                                onTap: () {
-                                  //Get.to(const Enrol());
-                                },
-                                child: Container(
-                                  height: 1,
-                                  width: 300,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: Appcolor.hometabs,
-                                  ),
-                                  child: const Center(
-                                      child: Text(
-                                    "Next",
-                                    style: TextStyle(fontSize: 20),
-                                  )),
-                                ))),
+                        Row(children: [
+                          Expanded(
+                              child: ButtonTheme(
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const Name()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                  textStyle: const TextStyle(fontSize: 15)),
+                              child: const Text('Next'),
+                            ),
+                          ))
+                        ]),
                         const SizedBox(
                           height: 10,
                         ),

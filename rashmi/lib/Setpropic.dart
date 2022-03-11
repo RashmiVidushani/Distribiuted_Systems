@@ -1,15 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rashmi/mainui.dart';
 import 'color.dart';
 
-class Setpropic extends StatefulWidget {
-  const Setpropic({Key? key}) : super(key: key);
+class Propic extends StatefulWidget {
+  const Propic({Key? key}) : super(key: key);
 
   @override
-  _SetpropicState createState() => _SetpropicState();
+  _PropicState createState() => _PropicState();
 }
 
-class _SetpropicState extends State<Setpropic> {
+class _PropicState extends State<Propic> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +36,7 @@ class _SetpropicState extends State<Setpropic> {
             const Padding(padding: EdgeInsets.only(top: 20)),
             Container(
                 width: MediaQuery.of(context).size.width,
-                height: 400,
+                height: 500,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [
                       Appcolor.hom.withOpacity(0.9),
@@ -55,99 +56,90 @@ class _SetpropicState extends State<Setpropic> {
                 child: Container(
                   padding: const EdgeInsets.only(left: 20, top: 25, right: 20),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(children: [
-                        Text(
-                          "Set Profile:  Edu-MASTER",
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Appcolor.black,
-                              fontWeight: FontWeight.w500),
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(children: [
+                          Text(
+                            "Set Profile:  Edu-MASTER",
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Appcolor.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
+                        const SizedBox(
+                          height: 25,
                         ),
+                        Text(
+                          "Select your Display picture:",
+                          style: TextStyle(fontSize: 18, color: Appcolor.white),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Row(children: [
+                          Expanded(
+                              child: ButtonTheme(
+                            minWidth: 300,
+                            height: 70,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const Mainui()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                  textStyle: const TextStyle(fontSize: 15)),
+                              child: const Text('Browse'),
+                            ),
+                          ))
+                        ]),
+                        const SizedBox(
+                          height: 270,
+                        ),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Expanded(
+                                child: ButtonTheme(
+                                  minWidth: 400,
+                                  height: 70,
+                                  child: ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Mainui()));
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                        textStyle:
+                                            const TextStyle(fontSize: 15)),
+                                    child: const Text('Skip'),
+                                  ),
+                                ),
+                              ),
+                              const Spacer(),
+                              Expanded(
+                                  child: ButtonTheme(
+                                minWidth: 400,
+                                height: 70,
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Mainui()));
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                      textStyle: const TextStyle(fontSize: 15)),
+                                  child: const Text('Next'),
+                                ),
+                              ))
+                            ]),
                       ]),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Text(
-                        "Select your Display picture:",
-                        style: TextStyle(fontSize: 18, color: Appcolor.white),
-                      ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Expanded(
-                          child: InkWell(
-                              onTap: () {
-                                //Get.to(const Enrol());
-                              },
-                              child: Container(
-                                height: 1,
-                                width: 100,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Appcolor.hometabs,
-                                ),
-                                child: const Center(
-                                    child: Text(
-                                  "Browse",
-                                  style: TextStyle(fontSize: 20),
-                                )),
-                              ))),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      // Image.asset('image/icon.jfif'),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Expanded(
-                          child: InkWell(
-                              onTap: () {
-                                //Get.to(const Enrol());
-                              },
-                              child: Container(
-                                height: 1,
-                                width: 300,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Appcolor.hometabs,
-                                ),
-                                child: const Center(
-                                    child: Text(
-                                  "Skip",
-                                  style: TextStyle(fontSize: 20),
-                                )),
-                              ))),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Expanded(
-                          child: InkWell(
-                              onTap: () {
-                                //Get.to(const Logo());
-                              },
-                              child: Container(
-                                height: 10,
-                                width: 300,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Appcolor.hometabs,
-                                ),
-                                child: const Center(
-                                    child: Text(
-                                  "Next!",
-                                  style: TextStyle(fontSize: 20),
-                                )),
-                              ))),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                    ],
-                  ),
                 )),
           ])),
     );
