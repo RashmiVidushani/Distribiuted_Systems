@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "112318322983",
+    "project_id": "edu-master-558b6",
+    "storage_bucket": "edu-master-558b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112318322983:android:b2ff6ea8f8c4c2bbcaf102",
+        "android_client_info": {
+          "package_name": "com.example.rashmi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112318322983-8b8cgc0fbcqhkjpk1r3k8191u040bhas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDNrK7nNT7IJ0XbFacwbAR7uaWkJ4wVNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112318322983-8b8cgc0fbcqhkjpk1r3k8191u040bhas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

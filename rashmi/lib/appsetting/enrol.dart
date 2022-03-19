@@ -1,6 +1,10 @@
+import 'dart:isolate';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:rashmi/appsetting/otpcheck.dart';
+import 'package:rashmi/appsetting/setname.dart';
 import '/widgets/color.dart';
+
 
 class Enrol extends StatefulWidget {
   const Enrol({Key? key}) : super(key: key);
@@ -10,6 +14,11 @@ class Enrol extends StatefulWidget {
 }
 
 class _EnrolState extends State<Enrol> {
+  TextEditingController emailCon = TextEditingController();
+  TextEditingController otpCon = TextEditingController();
+
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +44,7 @@ class _EnrolState extends State<Enrol> {
               const Padding(padding: EdgeInsets.only(top: 20)),
               Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 250,
+                  height: 350,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                           colors: [
@@ -61,59 +70,122 @@ class _EnrolState extends State<Enrol> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(children: [
-                          Text(
-                            "Enroll:  Edu-MASTER",
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: Appcolor.black,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ]),
+                        Text(
+                          "Enter your E-mail address:",
+                          style: TextStyle(fontSize: 16, color: Appcolor.white),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: TextFormField(
+                                style: const TextStyle(color: Colors.white),
+                                decoration: const InputDecoration(
+                                    border: UnderlineInputBorder(),
+                                    labelText: 'eg: someone@gmail.com',
+                                    labelStyle: TextStyle(
+                                        color: Colors.black, fontSize: 15)),
+                                controller: emailCon,
+                              ),
+                            ),
+                            Expanded(
+                                child: ButtonTheme(
+                              minWidth: 300,
+                              height: 70,
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => const Name()));
+                                },
+                                style: TextButton.styleFrom(
+                                    textStyle: const TextStyle(
+                                  fontSize: 15,
+                                )),
+                                child: const Text('Send code'),
+                              ),
+                            ))
+                          ],
+                        ),
                         const SizedBox(
                           height: 25,
                         ),
-                        Text(
-                          "Enter your E-mail address:",
-                          style: TextStyle(fontSize: 18, color: Appcolor.white),
+                        Row(
+                          children: [
+                            Text(
+                              "Check your e-mail for OTP:",
+                              style: TextStyle(
+                                  fontSize: 16, color: Appcolor.white),
+                            )
+                          ],
                         ),
                         const SizedBox(
                           height: 10,
                         ),
                         TextFormField(
                           decoration: const InputDecoration(
-                            border: UnderlineInputBorder(),
-                            labelText: 'eg: someone@gmail.com',
-                          ),
+                              border: UnderlineInputBorder(),
+                              labelText: 'eg: 689458',
+                              labelStyle:
+                                  TextStyle(color: Colors.black, fontSize: 15)),
+                          controller: otpCon,
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                "Didn't recieve?:",
+                                style: TextStyle(
+                                    fontSize: 16, color: Appcolor.white),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 50,
+                            ),
+                            Expanded(
+                                child: ButtonTheme(
+                              minWidth: 300,
+                              height: 70,
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => const Name()));
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    textStyle: const TextStyle(fontSize: 15)),
+                                child: const Text('Resend OTP'),
+                              ),
+                            ))
+                          ],
                         ),
                         Row(children: [
                           Expanded(
                               child: ButtonTheme(
-                            minWidth: 300,
-                            height: 70,
                             child: ElevatedButton(
                               onPressed: () {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            const Otpcheck()));
+                                        builder: (context) => const Name()));
                               },
                               style: ElevatedButton.styleFrom(
                                   textStyle: const TextStyle(fontSize: 15)),
-                              child: const Text('Send code'),
+                              child: const Text('Next'),
                             ),
                           ))
                         ]),
-                        const SizedBox(
-                          height: 10,
-                        ),
                       ],
                     ),
                   )),
             ])));
   }
+  
 }
