@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "112318322983",
-    "project_id": "edu-master-558b6",
-    "storage_bucket": "edu-master-558b6.appspot.com"
+    "project_number": "13353057406",
+    "project_id": "distributed-f5423",
+    "storage_bucket": "distributed-f5423.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:112318322983:android:b2ff6ea8f8c4c2bbcaf102",
+        "mobilesdk_app_id": "1:13353057406:android:19931dce27e07cf20bac2f",
         "android_client_info": {
           "package_name": "com.example.rashmi"
         }
       },
       "oauth_client": [
         {
-          "client_id": "112318322983-8b8cgc0fbcqhkjpk1r3k8191u040bhas.apps.googleusercontent.com",
+          "client_id": "13353057406-2nm4i0con3h9igvmihnlug6nn3s7i7dp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDDNrK7nNT7IJ0XbFacwbAR7uaWkJ4wVNw"
+          "current_key": "AIzaSyCF-fsT6ADOfaNewOTQrvE3xqNjNr4Qqx8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "112318322983-8b8cgc0fbcqhkjpk1r3k8191u040bhas.apps.googleusercontent.com",
+              "client_id": "13353057406-2nm4i0con3h9igvmihnlug6nn3s7i7dp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
